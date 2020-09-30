@@ -19,7 +19,7 @@ public class GamersId_Test {
 	private static Properties properties = getConfigProperties();
 	private static WebTarget targetAPI;
 	static Client client;
-	private GamersResponse_DTO responseList;
+	private GamersResponse_DTO response;
 	
 	@BeforeClass
 	public static void setup() {
@@ -30,32 +30,32 @@ public class GamersId_Test {
 	public void buildCall() {
 		targetAPI = client.target(properties.getProperty("targetSite", "targetSite") + "/gamer/"
 				+ properties.getProperty("gamer_id", "gamer_id"));
-		responseList = targetAPI.request().get(GamersResponse_DTO.class);
+		response = targetAPI.request().get(GamersResponse_DTO.class);
 	}
 
 	@Test
 	public void test_GamerId_gamer_id() {
-		assertNotNull(responseList.getGamer_id());
+		assertNotNull(response.getGamer_id());
 	}
 
 	@Test
 	public void test_GamerId_nickname() {
-		assertNotNull(responseList.getNickname());
+		assertNotNull(response.getNickname());
 	}
 
 	@Test
 	public void test_GamerId_dateOfBirth() {
-		assertNotNull(responseList.getDateOfBirth());
+		assertNotNull(response.getDateOfBirth());
 	}
 
 	@Test
 	public void test_GamerId_bio() {
-		assertNotNull(responseList.getBio());
+		assertNotNull(response.getBio());
 	}
 
 	@Test
 	public void test_GamerId_photo_id() {
-		assertNotNull(responseList.getPhoto_id());
+		assertNotNull(response.getPhoto_id());
 	}
 	
 }

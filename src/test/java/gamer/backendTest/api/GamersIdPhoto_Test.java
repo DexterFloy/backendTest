@@ -37,7 +37,7 @@ public class GamersIdPhoto_Test {
 	}
 	
 	@Test
-	public void testOcsTest_AthletesId_Photo() {
+	public void test_GamerId_Photo() {
 		byte[] response = targetAPI.request().get(byte[].class);
 		assertNotNull(response);
 		try {
