@@ -36,35 +36,35 @@ public class Gamers_Test {
 	}
 
 	@Test
-	public void testOcsTest_Gamers_Gamer_id() {
+	public void test_Gamers_Gamer_id() {
 		for (GamersResponse_DTO response : responseList) {
 			assertNotNull(response.getGamer_id());
 		}
 	}
 
 	@Test
-	public void testOcsTest_Gamers_nickname() {
+	public void test_Gamers_nickname() {
 		for (GamersResponse_DTO response : responseList) {
 			assertNotNull(response.getNickname());
 		}
 	}
 
 	@Test
-	public void testOcsTest_Gamers_DateOfBirth() {
+	public void test_Gamers_DateOfBirth() {
 		for (GamersResponse_DTO response : responseList) {
 			assertNotNull(response.getDateOfBirth());
 		}
 	}
 
 	@Test
-	public void testOcsTest_Gamers_Bio() {
+	public void test_Gamers_Bio() {
 		for (GamersResponse_DTO response : responseList) {
 			assertNotNull(response.getBio());
 		}
 	}
 
 	@Test
-	public void testOcsTest_Gamers_Photo_id() {
+	public void test_Gamers_Photo_id() {
 		for (GamersResponse_DTO response : responseList) {
 			assertNotNull(response.getPhoto_id());
 		}
